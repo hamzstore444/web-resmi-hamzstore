@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hapus Latar Belakang | Hamzz Official</title>
+    <link rel="stylesheet" href="remove.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">Hapus<span>Latar Belakang</span></h1>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+                <label class="switch">
+                    <input type="checkbox" id="themeToggle">
+                    <span class="slider round"></span>
+                </label>
+                <i class="fas fa-sun"></i>
+            </div>
+        </header>
+
+        <main>
+            <div class="upload-container">
+                <div class="dropzone" id="dropzone">
+                    <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                    <h2>Seret & Jatuhkan Gambar </h2>
+                    <p>or click to browse files</p>
+                    <input type="file" id="fileInput" accept="image/*">
+                </div>
+                
+                <div class="options">
+                    <div class="option-group">
+                        <label for="hdMode">HD Quality</label>
+                        <label class="switch">
+                            <input type="checkbox" id="hdMode">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    
+                    <button id="processBtn" class="btn" disabled>
+                        <span class="btn-text">Remove Background</span>
+                        <span class="btn-loader hidden"><i class="fas fa-spinner fa-spin"></i></span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="result-container hidden">
+                <div class="image-preview">
+                    <div class="image-wrapper">
+                        <img id="originalImage" src="" alt="Original Image">
+                        <div class="image-label">Original</div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img id="resultImage" src="" alt="Result Image">
+                        <div class="image-label">Hasil</div>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button id="downloadBtn" class="btn">
+                        <i class="fas fa-download"></i> Download
+                    </button>
+                    <button id="newImageBtn" class="btn outline">
+                        <i class="fas fa-redo"></i> Buat Baru
+                    </button>
+                </div>
+            </div>
+        </main>
+        
+        <div class="notification hidden" id="notification"></div>
+    </div>
+
+    <script src="rmv.js"></script>
+    <script src="rmove.js"></script>
+</body>
+</html>
